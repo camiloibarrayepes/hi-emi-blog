@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "category": "Desarrollo",
+    "date": "20 jul 2026",
+    "title": "Cómo estimular el lenguaje de tu bebé desde casa",
+    "subtitle": "Pequeñas acciones cotidianas pueden acompañar el desarrollo del lenguaje de manera natural.",
+    "summary": "Pequeñas acciones diarias pueden acompañar el desarrollo del lenguaje de forma natural.",
+    "image": "https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "El lenguaje comienza mucho antes de que aparezcan las primeras palabras. Tu bebé escucha voces, reconoce tonos y aprende a relacionar sonidos con personas, objetos y emociones."
+      },
+      {
+        "type": "heading",
+        "text": "Háblale durante las actividades diarias"
+      },
+      {
+        "type": "paragraph",
+        "text": "Puedes describir lo que haces mientras lo vistes, preparas su comida o salen a caminar. No necesitas convertir cada momento en una lección; basta con hablarle de forma cercana y natural."
+      },
+      {
+        "type": "tip",
+        "text": "Habla despacio, usa frases sencillas y dale tiempo para responder con sonidos, gestos o miradas."
+      },
+      {
+        "type": "heading",
+        "text": "Lee cuentos cortos"
+      },
+      {
+        "type": "paragraph",
+        "text": "Los libros con imágenes grandes y textos breves son una excelente oportunidad para señalar objetos, repetir sonidos y crear rutinas especiales juntos."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Señala los dibujos mientras los nombras.",
+          "Repite las palabras que despierten su interés.",
+          "Permite que toque y explore el libro.",
+          "No te preocupes por terminar toda la historia."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "Lo más importante no es enseñar muchas palabras, sino crear momentos de conexión alrededor del lenguaje."
+      },
+      {
+        "type": "heading",
+        "text": "Celebra sus intentos"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cuando tu bebé intente decir una palabra, responde con entusiasmo y repítela correctamente sin presionarlo. Cada intento forma parte de su proceso y puede convertirse en un recuerdo precioso para guardar en Hi Emi."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Alimentación",
+    "date": "18 jul 2026",
+    "title": "Alimentación complementaria: primeros pasos",
+    "subtitle": "Una guía sencilla para acompañar esta nueva etapa con tranquilidad.",
+    "summary": "Ideas prácticas para comenzar esta etapa de forma positiva, tranquila y segura.",
+    "image": "https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "La alimentación complementaria es una etapa de exploración. Los sabores, texturas y colores son nuevos para tu bebé, por lo que la paciencia es tan importante como los alimentos que ofreces."
+      },
+      {
+        "type": "heading",
+        "text": "Empieza con pequeñas cantidades"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ofrece porciones pequeñas y observa las señales de hambre y saciedad. No es necesario que termine todo lo que se sirve."
+      },
+      {
+        "type": "tip",
+        "text": "Consulta con el pediatra antes de iniciar la alimentación complementaria y ante cualquier duda sobre alergias o alimentos específicos."
+      },
+      {
+        "type": "heading",
+        "text": "Permite que explore"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tocar, oler y aplastar la comida también forma parte del aprendizaje. Aunque pueda ensuciarse, estas experiencias ayudan a familiarizarse con los alimentos."
+      }
+    ]
+  },
+  {
+    "type": "ad",
+    "title": "Aquí tu publicidad",
+    "text": "Conecta tu marca con familias interesadas en el bienestar de sus pequeños.",
+    "buttonText": "Conoce más",
+    "url": "mailto:camilo.ibarray@gmail.com?subject=Publicidad%20en%20Hi%20Emi"
+  },
+  {
+    "id": 3,
+    "category": "Sueño",
+    "date": "15 jul 2026",
+    "title": "Rutinas de sueño para noches más tranquilas",
+    "subtitle": "Hábitos simples para preparar un ambiente de descanso.",
+    "summary": "Hábitos sencillos que pueden ayudarte a preparar un ambiente cómodo antes de dormir.",
+    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Una rutina predecible puede ayudar al bebé a reconocer que se acerca el momento de descansar."
+      },
+      {
+        "type": "heading",
+        "text": "Repite una secuencia sencilla"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Bajar la intensidad de las luces.",
+          "Cambiar el pañal y poner el pijama.",
+          "Leer un cuento corto.",
+          "Hablar en voz suave o cantar una canción."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Cada bebé es diferente. Ajusta la rutina a las necesidades de tu familia y consulta con un profesional ante dificultades persistentes."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Juegos",
+    "date": "12 jul 2026",
+    "title": "Juegos sencillos para estimular su curiosidad",
+    "subtitle": "Actividades cotidianas para explorar sonidos, texturas y movimientos.",
+    "summary": "Actividades cotidianas para explorar sonidos, texturas, colores y movimientos.",
+    "image": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "El juego es una de las principales formas en que los bebés conocen el mundo. No necesitas juguetes costosos para crear experiencias significativas."
+      },
+      {
+        "type": "heading",
+        "text": "Explora objetos seguros del hogar"
+      },
+      {
+        "type": "paragraph",
+        "text": "Recipientes plásticos, cucharas de madera y telas con diferentes texturas pueden convertirse en elementos de exploración bajo supervisión."
+      },
+      {
+        "type": "tip",
+        "text": "Acompaña siempre el juego y evita piezas pequeñas, bordes afilados u objetos que puedan representar un riesgo."
+      }
+    ]
+  }
+]
