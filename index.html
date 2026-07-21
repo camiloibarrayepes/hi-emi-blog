@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5ff">
+  <title>Consejos | Hi Emi</title>
+  <style>
+    :root {
+      --bg: #f8f7fd;
+      --card: #fff;
+      --text: #17233f;
+      --muted: #68728a;
+      --primary: #7157f6;
+      --primary2: #8d79ff;
+      --soft: #eeeaff;
+      --shadow: 0 16px 40px rgba(74, 63, 140, .11);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 90% 4%, rgba(113, 87, 246, .10), transparent 25%),
+        radial-gradient(circle at 5% 30%, rgba(76, 157, 245, .09), transparent 24%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+   .page {
+    width: min(100%, 880px);
+    margin: auto;
+    padding: 0 18px 120px;
+}
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start
+    }
+
+    .brand {
+      display: inline-flex;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 13px
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1;
+      margin: 13px 0 10px;
+      letter-spacing: -.04em
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 540px
+    }
+
+    .cloud {
+      width: 78px;
+      height: 78px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: var(--shadow);
+      font-size: 40px
+    }
+
+    .categories-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    margin: 0 -18px 20px;
+    padding: 12px 18px;
+      background: rgba(248, 247, 253, .91);
+      backdrop-filter: blur(18px)
+    }
+
+    .categories {
+      display: flex;
+      gap: 10px;
+      overflow: auto;
+      scrollbar-width: none
+    }
+
+    .categories::-webkit-scrollbar {
+      display: none
+    }
+
+    .category {
+      border: 0;
+      background: #fff;
+      padding: 12px 15px;
+      border-radius: 999px;
+      white-space: nowrap;
+      font-weight: 750;
+      color: var(--text);
+      box-shadow: 0 8px 24px rgba(74, 63, 140, .07)
+    }
+
+    .category.active {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary2))
+    }
+
+    .feed {
+      display: grid;
+      gap: 17px
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      min-height: 185px;
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow)
+    }
+
+    .photo {
+      min-height: 185px;
+      background: #ece9ff
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover
+    }
+
+    .body {
+      padding: 19px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center
+    }
+
+    .tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 12px
+    }
+
+    .date {
+      font-size: 12px;
+      color: #9198aa
+    }
+
+    h2 {
+      margin: 10px 0 7px;
+      font-size: 25px;
+      line-height: 1.15;
+      letter-spacing: -.025em
+    }
+
+    .summary {
+      margin: 0 0 14px;
+      color: var(--muted)
+    }
+
+    .footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .read {
+      color: var(--primary);
+      font-weight: 800
+    }
+
+    .source {
+      font-size: 12px;
+      color: #9299ab
+    }
+
+    .ad {
+      display: grid;
+      grid-template-columns: 84px 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 22px;
+      border: 2px dashed rgba(113, 87, 246, .30);
+      border-radius: 24px;
+      background: linear-gradient(135deg, #f3efff, #eef7ff)
+    }
+
+    .ad-icon {
+      width: 76px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: #fff;
+      font-size: 36px;
+      box-shadow: 0 10px 28px rgba(74, 63, 140, .10)
+    }
+
+    .ad h2 {
+      margin: 0 0 4px;
+      color: var(--primary);
+      font-size: 25px
+    }
+
+    .ad p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .ad a {
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      font-weight: 800;
+      white-space: nowrap
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .75);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center
+    }
+
+    nav {
+      position: fixed;
+      left: 50%;
+      bottom: max(14px, env(safe-area-inset-bottom));
+      transform: translateX(-50%);
+      width: min(calc(100% - 24px), 720px);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 10px;
+      border-radius: 27px;
+      background: rgba(255, 255, 255, .95);
+      box-shadow: 0 18px 48px rgba(43, 40, 86, .19);
+      backdrop-filter: blur(20px)
+    }
+
+    .nav {
+      display: grid;
+      place-items: center;
+      gap: 2px;
+      color: #7a8296;
+      font-size: 11px;
+      font-weight: 700
+    }
+
+    .nav .icon {
+      font-size: 22px
+    }
+
+    .nav.active {
+      color: var(--primary)
+    }
+
+    .nav.plus .icon {
+      width: 54px;
+      height: 54px;
+      margin-top: -25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      color: #fff;
+      font-size: 30px
+    }
+
+    @media(max-width:620px) {
+      h1 {
+        font-size: 39px
+      }
+
+      .cloud {
+        width: 68px;
+        height: 68px
+      }
+
+      .card {
+        grid-template-columns: 122px 1fr;
+        min-height: 174px
+      }
+
+      .photo {
+        min-height: 174px
+      }
+
+      .body {
+        padding: 15px
+      }
+
+      h2 {
+        font-size: 19px
+      }
+
+      .summary {
+        font-size: 13px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden
+      }
+
+      .meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px
+      }
+
+      .source {
+        display: none
+      }
+
+      .ad {
+        grid-template-columns: 66px 1fr
+      }
+
+      .ad-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 30px
+      }
+
+      .ad a {
+        grid-column: 1/-1;
+        text-align: center
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="categories-wrap">
+      <div class="categories" id="categories"></div>
+    </section>
+
+    <section class="feed" id="feed"></section>
+
+    <p class="notice">Contenido informativo. No sustituye la orientación de un pediatra o profesional de la salud.</p>
+  </main>
+
+
+  <script>
+    const categories = [
+      { id: "Todos", icon: "⭐" }, { id: "Desarrollo", icon: "🌱" },
+      { id: "Alimentación", icon: "🥣" }, { id: "Sueño", icon: "🌙" }, { id: "Juegos", icon: "🧩" }
+    ];
+
+    const articles = [
+      { category: "Desarrollo", date: "20 jul 2026", title: "Cómo estimular el lenguaje de tu bebé desde casa", summary: "Pequeñas acciones diarias pueden acompañar el desarrollo del lenguaje de forma natural.", image: "https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=82", source: "Hi Emi", url: "#" },
+      { category: "Alimentación", date: "18 jul 2026", title: "Alimentación complementaria: primeros pasos", summary: "Ideas prácticas para comenzar esta etapa de forma positiva, tranquila y segura.", image: "https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=900&q=82", source: "Hi Emi", url: "#" },
+      { type: "ad" },
+      { category: "Sueño", date: "15 jul 2026", title: "Rutinas de sueño para noches más tranquilas", summary: "Hábitos sencillos que pueden ayudarte a preparar un ambiente cómodo antes de dormir.", image: "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=900&q=82", source: "Hi Emi", url: "#" },
+      { category: "Juegos", date: "12 jul 2026", title: "Juegos sencillos para estimular su curiosidad", summary: "Actividades cotidianas para explorar sonidos, texturas, colores y movimientos.", image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=900&q=82", source: "Hi Emi", url: "#" }
+    ];
+
+    let selected = "Todos";
+    const categoriesEl = document.getElementById("categories");
+    const feed = document.getElementById("feed");
+
+    function iconFor(name) { return categories.find(x => x.id === name)?.icon || "✨" }
+
+    function renderCategories() {
+      categoriesEl.innerHTML = categories.map(c => `<button class="category ${c.id === selected ? "active" : ""}" data-id="${c.id}">${c.icon} ${c.id}</button>`).join("");
+      document.querySelectorAll(".category").forEach(b => b.onclick = () => { selected = b.dataset.id; renderCategories(); renderFeed() });
+    }
+
+    function articleHTML(a) {
+      return `<article class="card">
+    <div class="photo"><img src="${a.image}" alt="" loading="lazy"></div>
+    <div class="body">
+      <div class="meta"><span class="tag">${iconFor(a.category)} ${a.category}</span><span class="date">${a.date}</span></div>
+      <h2>${a.title}</h2>
+      <p class="summary">${a.summary}</p>
+      <div class="footer"><a class="read" href="${a.url}">Leer más →</a><span class="source">Fuente: ${a.source}</span></div>
+    </div>
+  </article>`;
+    }
+
+    function adHTML() {
+      return `<aside class="ad">
+    <div class="ad-icon">📣</div>
+    <div><h2>Aquí tu publicidad</h2><p>Conecta tu marca con familias interesadas en el bienestar de sus pequeños.</p></div>
+    <a href="mailto:camilo.ibarray@gmail.com?subject=Publicidad%20en%20Hi%20Emi">Conoce más</a>
+  </aside>`;
+    }
+
+    function renderFeed() {
+      const items = articles.filter(a => a.type === "ad" || selected === "Todos" || a.category === selected);
+      feed.innerHTML = items.map(a => a.type === "ad" ? adHTML() : articleHTML(a)).join("");
+    }
+
+    renderCategories();
+    renderFeed();
+  </script>
+</body>
+
+</html>
