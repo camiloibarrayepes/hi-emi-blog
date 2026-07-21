@@ -7,7 +7,6 @@ const CATEGORY_ICONS = {
 
 const root = document.getElementById("articleRoot");
 const backButton = document.getElementById("backButton");
-const shareButton = document.getElementById("shareButton");
 
 backButton.addEventListener("click", () => {
   if (window.history.length > 1) {
@@ -16,6 +15,22 @@ backButton.addEventListener("click", () => {
     window.location.href = "./index.html";
   }
 });
+
+const articleToolbar = document.getElementById("articleToolbar");
+
+function updateToolbarVisibility() {
+  const isAtTop = window.scrollY <= 10;
+
+  articleToolbar.classList.toggle("hidden", !isAtTop);
+}
+
+window.addEventListener(
+  "scroll",
+  updateToolbarVisibility,
+  { passive: true }
+);
+
+updateToolbarVisibility();
 
 async function loadArticle() {
   try {
@@ -32,7 +47,6 @@ async function loadArticle() {
     if (!article) throw new Error("El artículo no existe o fue eliminado.");
 
     renderArticle(article, articles);
-    configureShare(article);
   } catch (error) {
     root.innerHTML = `
       <div class="error-state">
@@ -141,10 +155,6 @@ function calculateReadingTime(blocks) {
 
   const words = text.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(words / 200));
-}
-
-function configureShare(article) {
-  shareButton.addEventListener("click", () => shareArticle(article));
 }
 
 async function shareArticle(article) {
