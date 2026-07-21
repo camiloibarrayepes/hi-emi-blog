@@ -7,28 +7,29 @@ const CATEGORY_ICONS = {
 
 const root = document.getElementById("articleRoot");
 const backButton = document.getElementById("backButton");
-
-backButton.addEventListener("click", () => {
-  if (window.history.length > 1) {
-    window.history.back();
-  } else {
-    window.location.href = "./index.html";
-  }
-});
-
 const articleToolbar = document.getElementById("articleToolbar");
 
+if (backButton) {
+  backButton.addEventListener("click", () => {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = "./index.html";
+    }
+  });
+}
+
 function updateToolbarVisibility() {
+  if (!articleToolbar) return;
+
   const isAtTop = window.scrollY <= 10;
 
   articleToolbar.classList.toggle("hidden", !isAtTop);
 }
 
-window.addEventListener(
-  "scroll",
-  updateToolbarVisibility,
-  { passive: true }
-);
+window.addEventListener("scroll", updateToolbarVisibility, {
+  passive: true
+});
 
 updateToolbarVisibility();
 
