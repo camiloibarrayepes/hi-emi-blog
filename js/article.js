@@ -1,20 +1,81 @@
 const CATEGORY_ICONS = {
-  "Desarrollo": "🌱",
-  "Alimentación": "🥣",
-  "Sueño": "🌙",
-  "Juegos": "🧩"
+  Desarrollo: "🌱",
+  Alimentación: "🥣",
+  Sueño: "🌙",
+  Juegos: "🧩"
 };
 
+const CATEGORY_LABELS = {
+  es: {
+    Desarrollo: "Desarrollo",
+    Alimentación: "Alimentación",
+    Sueño: "Sueño",
+    Juegos: "Juegos"
+  },
+  en: {
+    Desarrollo: "Development",
+    Alimentación: "Feeding",
+    Sueño: "Sleep",
+    Juegos: "Play"
+  }
+};
+
+const UI = {
+  es: {
+    articleTitle: "Artículo | Hi Emi",
+    loading: "Cargando artículo...",
+    noId: "No se indicó qué artículo abrir.",
+    cannotLoad: "No fue posible cargar el artículo.",
+    missing: "El artículo no existe o fue eliminado.",
+    notFoundTitle: "No pudimos abrir este artículo",
+    backHome: "Volver a consejos",
+    readingTime: "min de lectura",
+    source: "Fuente",
+    like: "♡ Me gustó",
+    liked: "♥ Guardado",
+    share: "↗ Compartir",
+    tipLabel: "💜 Consejo Hi Emi",
+    relatedTitle: "También te puede interesar",
+    copied: "Enlace copiado."
+  },
+  en: {
+    articleTitle: "Article | Hi Emi",
+    loading: "Loading article...",
+    noId: "No article was selected.",
+    cannotLoad: "We couldn't load the article.",
+    missing: "The article doesn't exist or was removed.",
+    notFoundTitle: "We couldn't open this article",
+    backHome: "Back to tips",
+    readingTime: "min read",
+    source: "Source",
+    like: "♡ Like it",
+    liked: "♥ Saved",
+    share: "↗ Share",
+    tipLabel: "💜 Hi Emi tip",
+    relatedTitle: "You may also like",
+    copied: "Link copied."
+  }
+};
+
+const language = resolveLanguage();
+const ui = UI[language] ?? UI.es;
 const root = document.getElementById("articleRoot");
 const backButton = document.getElementById("backButton");
 const articleToolbar = document.getElementById("articleToolbar");
 
+document.documentElement.lang = language;
+document.title = ui.articleTitle;
+
 if (backButton) {
+  backButton.setAttribute("aria-label", text("Volver", "Back"));
   backButton.addEventListener("click", () => {
+    const target = new URL("./index.html", window.location.href);
+    target.searchParams.set("lang", language);
+
     if (window.history.length > 1) {
       window.history.back();
     } else {
-      window.location.href = "./index.html";
+      window.location.href = target.pathname + target.search;
     }
   });
 }
@@ -23,7 +84,6 @@ function updateToolbarVisibility() {
   if (!articleToolbar) return;
 
   const isAtTop = window.scrollY <= 10;
-
   articleToolbar.classList.toggle("hidden", !isAtTop);
 }
 
@@ -36,27 +96,45 @@ updateToolbarVisibility();
 async function loadArticle() {
   try {
     const id = new URLSearchParams(window.location.search).get("id");
-    if (!id) throw new Error("No se indicó qué artículo abrir.");
+    if (!id) throw new Error(ui.noId);
 
-    const response = await fetch("./data/articles.json");
-    if (!response.ok) throw new Error("No fue posible cargar el artículo.");
-
-    const items = await response.json();
+    const items = await loadLocalizedArticles();
     const articles = items.filter(item => item.type !== "ad");
     const article = articles.find(item => String(item.id) === String(id));
 
-    if (!article) throw new Error("El artículo no existe o fue eliminado.");
+    if (!article) throw new Error(ui.missing);
 
     renderArticle(article, articles);
   } catch (error) {
     root.innerHTML = `
       <div class="error-state">
-        <h2>No pudimos abrir este artículo</h2>
+        <h2>${ui.notFoundTitle}</h2>
         <p>${error.message}</p>
-        <a class="primary-button" href="./index.html">Volver a consejos</a>
+        <a class="primary-button" href="${homeLink()}">${ui.backHome}</a>
       </div>
     `;
   }
+}
+
+async function loadLocalizedArticles() {
+  const paths = [
+    `./data/articles.${language}.json`,
+    "./data/articles.json"
+  ];
+
+  let lastError = null;
+
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error(ui.cannotLoad);
+      return await response.json();
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError ?? new Error(ui.cannotLoad);
 }
 
 function renderArticle(article, allArticles) {
@@ -72,7 +150,7 @@ function renderArticle(article, allArticles) {
     <article>
       <header class="article-header">
         <span class="tag">
-          ${CATEGORY_ICONS[article.category] ?? "✨"} ${article.category}
+          ${CATEGORY_ICONS[article.category] ?? "✨"} ${categoryLabel(article.category)}
         </span>
 
         <h1>${article.title}</h1>
@@ -81,9 +159,9 @@ function renderArticle(article, allArticles) {
         <div class="article-info">
           <span>${article.date}</span>
           <span>•</span>
-          <span>${readingTime} min de lectura</span>
+          <span>${readingTime} ${ui.readingTime}</span>
           <span>•</span>
-          <span>Fuente: ${article.source}</span>
+          <span>${ui.source}: ${article.source}</span>
         </div>
       </header>
 
@@ -94,19 +172,19 @@ function renderArticle(article, allArticles) {
       </section>
 
       <section class="article-actions">
-        <button class="secondary-button" id="likeButton">♡ Me gustó</button>
-        <button class="secondary-button" id="shareButtonBottom">↗ Compartir</button>
+        <button class="secondary-button" id="likeButton">${ui.like}</button>
+        <button class="secondary-button" id="shareButtonBottom">${ui.share}</button>
       </section>
 
       ${related.length ? `
         <section class="related-section">
-          <h2>También te puede interesar</h2>
+          <h2>${ui.relatedTitle}</h2>
           <div class="related-grid">
             ${related.map(item => `
-              <a class="related-card" href="./article.html?id=${encodeURIComponent(item.id)}">
+              <a class="related-card" href="${articleLink(item.id)}">
                 <img src="${item.image}" alt="">
                 <div>
-                  <span class="tag">${CATEGORY_ICONS[item.category] ?? "✨"} ${item.category}</span>
+                  <span class="tag">${CATEGORY_ICONS[item.category] ?? "✨"} ${categoryLabel(item.category)}</span>
                   <h3>${item.title}</h3>
                 </div>
               </a>
@@ -118,7 +196,7 @@ function renderArticle(article, allArticles) {
   `;
 
   document.getElementById("likeButton")?.addEventListener("click", event => {
-    event.currentTarget.textContent = "♥ Guardado";
+    event.currentTarget.textContent = ui.liked;
   });
 
   document.getElementById("shareButtonBottom")?.addEventListener("click", () => {
@@ -134,7 +212,7 @@ function renderBlocks(blocks) {
       case "paragraph":
         return `<p>${block.text}</p>`;
       case "tip":
-        return `<div class="tip-box"><strong>💜 Consejo Hi Emi</strong>${block.text}</div>`;
+        return `<div class="tip-box"><strong>${ui.tipLabel}</strong>${block.text}</div>`;
       case "quote":
         return `<blockquote class="quote-box">${block.text}</blockquote>`;
       case "list":
@@ -170,11 +248,37 @@ async function shareArticle(article) {
       await navigator.share(shareData);
     } else {
       await navigator.clipboard.writeText(window.location.href);
-      alert("Enlace copiado.");
+      alert(ui.copied);
     }
   } catch (error) {
-    // El usuario pudo cancelar el diálogo de compartir.
+    // The user may have canceled the share dialog.
   }
+}
+
+function categoryLabel(category) {
+  return CATEGORY_LABELS[language]?.[category] ?? category;
+}
+
+function homeLink() {
+  const url = new URL("./index.html", window.location.href);
+  url.searchParams.set("lang", language);
+  return `./index.html?lang=${language}`;
+}
+
+function resolveLanguage() {
+  const params = new URLSearchParams(window.location.search);
+  const langParam = params.get("lang");
+
+  if (langParam === "es" || langParam === "en") {
+    return langParam;
+  }
+
+  const browserLanguage = (navigator.language || navigator.languages?.[0] || "en").toLowerCase();
+  return browserLanguage.startsWith("es") ? "es" : "en";
+}
+
+function text(spanish, english) {
+  return language === "es" ? spanish : english;
 }
 
 loadArticle();

@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "category": "Desarrollo",
+    "date": "20 Jul 2026",
+    "title": "How to encourage your baby's language development at home",
+    "subtitle": "Small everyday actions can naturally support language growth.",
+    "summary": "Simple daily actions can naturally support language development.",
+    "image": "https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Language begins long before the first words appear. Your baby listens to voices, recognizes tones, and learns to connect sounds with people, objects, and emotions."
+      },
+      {
+        "type": "heading",
+        "text": "Talk during daily activities"
+      },
+      {
+        "type": "paragraph",
+        "text": "You can describe what you are doing while dressing them, preparing their food, or going for a walk. You do not need to turn every moment into a lesson; just speak in a close and natural way."
+      },
+      {
+        "type": "tip",
+        "text": "Speak slowly, use simple phrases, and give them time to respond with sounds, gestures, or looks."
+      },
+      {
+        "type": "heading",
+        "text": "Read short stories"
+      },
+      {
+        "type": "paragraph",
+        "text": "Books with large images and brief text are a great opportunity to point at objects, repeat sounds, and create special routines together."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Point to the drawings while naming them.",
+          "Repeat the words that catch their interest.",
+          "Let them touch and explore the book.",
+          "Do not worry about finishing the whole story."
+        ]
+      },
+      {
+        "type": "quote",
+        "text": "What matters most is not teaching many words, but creating moments of connection around language."
+      },
+      {
+        "type": "heading",
+        "text": "Celebrate their attempts"
+      },
+      {
+        "type": "paragraph",
+        "text": "When your baby tries to say a word, respond with enthusiasm and repeat it correctly without pressure. Every attempt is part of the process and can become a precious memory to keep in Hi Emi."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Alimentación",
+    "date": "18 Jul 2026",
+    "title": "Complementary feeding: first steps",
+    "subtitle": "A simple guide to support this new stage with calm.",
+    "summary": "Practical ideas to begin this stage in a positive, calm, and safe way.",
+    "image": "https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Complementary feeding is a stage of exploration. Flavors, textures, and colors are new for your baby, so patience is as important as the foods you offer."
+      },
+      {
+        "type": "heading",
+        "text": "Start with small amounts"
+      },
+      {
+        "type": "paragraph",
+        "text": "Offer small portions and watch for hunger and fullness cues. It is not necessary for them to finish everything on the plate."
+      },
+      {
+        "type": "tip",
+        "text": "Check with your pediatrician before starting complementary feeding and whenever you have questions about allergies or specific foods."
+      },
+      {
+        "type": "heading",
+        "text": "Let them explore"
+      },
+      {
+        "type": "paragraph",
+        "text": "Touching, smelling, and squishing food is also part of learning. Even if it gets messy, these experiences help your baby become familiar with food."
+      }
+    ]
+  },
+  {
+    "type": "ad",
+    "title": "Your ad here",
+    "text": "Connect your brand with families who care about their little ones' well-being.",
+    "buttonText": "Learn more",
+    "url": "mailto:camilo.ibarray@gmail.com?subject=Publicidad%20en%20Hi%20Emi"
+  },
+  {
+    "id": 3,
+    "category": "Sueño",
+    "date": "15 Jul 2026",
+    "title": "Sleep routines for calmer nights",
+    "subtitle": "Simple habits to prepare a restful environment.",
+    "summary": "Simple habits that can help you prepare a comfortable environment before bedtime.",
+    "image": "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A predictable routine can help your baby recognize that it is time to rest."
+      },
+      {
+        "type": "heading",
+        "text": "Repeat a simple sequence"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Dim the lights.",
+          "Change the diaper and put on pajamas.",
+          "Read a short story.",
+          "Speak softly or sing a song."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Every baby is different. Adapt the routine to your family's needs and consult a professional if difficulties continue."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Juegos",
+    "date": "12 Jul 2026",
+    "title": "Simple play ideas to spark curiosity",
+    "subtitle": "Everyday activities to explore sounds, textures, and movement.",
+    "summary": "Everyday activities to explore sounds, textures, colors, and movement.",
+    "image": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=1400&q=85",
+    "source": "Hi Emi",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Play is one of the main ways babies learn about the world. You do not need expensive toys to create meaningful experiences."
+      },
+      {
+        "type": "heading",
+        "text": "Explore safe household objects"
+      },
+      {
+        "type": "paragraph",
+        "text": "Plastic containers, wooden spoons, and fabrics with different textures can become exploration tools under supervision."
+      },
+      {
+        "type": "tip",
+        "text": "Always stay close during play and avoid small parts, sharp edges, or objects that may pose a risk."
+      }
+    ]
+  }
+]
