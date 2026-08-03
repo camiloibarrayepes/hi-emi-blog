@@ -7,6 +7,7 @@ const SUPPORT_EMAIL = "camilo.ibarray@gmail.com";
 const BLOG_URL = "./index.html";
 const MARKETING_URL = "./app.html";
 const SUPPORT_URL = "./support.html";
+const PRIVACY_URL = "./privacy.html";
 
 const COPY = {
   es: {
@@ -20,11 +21,13 @@ const COPY = {
       openBlog: "Ver blog",
       openSupport: "Ir a soporte",
       openMarketing: "Ver página principal",
+      openPrivacy: "Ver privacidad",
       copyright: "Copyright © {year} Hi Emi. Todos los derechos reservados.",
       builtBy: "Creado por Camilo Ibarra.",
       supportEmailLabel: "Email de soporte",
       marketingUrlLabel: "URL de marketing",
-      supportUrlLabel: "URL de soporte"
+      supportUrlLabel: "URL de soporte",
+      privacyUrlLabel: "URL de privacidad"
     },
     marketing: {
       pageTitle: "Hi Emi | Guarda sus palabras para siempre",
@@ -96,6 +99,63 @@ const COPY = {
         ["Tengo acceso Premium o Friends & Family y no aparece", "Envíanos el correo de tu cuenta para validar el acceso configurado."],
         ["Quiero reportar un bug", "Mándanos una descripción breve, pasos para reproducirlo y una captura si la tienes."]
       ]
+    },
+    privacy: {
+      pageTitle: "Hi Emi | Política de privacidad",
+      eyebrow: "Política de privacidad oficial",
+      title: "Tu privacidad importa y tus recuerdos deben sentirse seguros.",
+      subtitle:
+        "Esta política explica qué información puede procesar Hi Emi, cómo se usa y qué opciones tienes respecto a tus datos.",
+      primaryCta: "Contactar soporte",
+      secondaryCta: "Ver página principal",
+      lastUpdatedLabel: "Última actualización",
+      lastUpdatedDate: "3 de agosto de 2026",
+      sections: [
+        {
+          title: "1. Qué hace Hi Emi",
+          body: "Hi Emi es una app pensada para guardar palabras, audios, fotos y recuerdos relacionados con el desarrollo temprano del lenguaje de tu bebé."
+        },
+        {
+          title: "2. Qué información puedes guardar",
+          body: "Dependiendo de cómo uses la app, puedes guardar nombres, sobrenombres, palabras registradas, grabaciones de audio, fotos, categorías y configuraciones relacionadas con tu experiencia."
+        },
+        {
+          title: "3. Cómo usamos esa información",
+          body: "La información se usa para mostrar tus recuerdos dentro de la app, organizar el contenido, habilitar funciones premium, y en caso de que conectes tu cuenta, sincronizar tus datos en la nube."
+        },
+        {
+          title: "4. Almacenamiento local y en la nube",
+          body: "Parte de la información puede almacenarse localmente en tu dispositivo. Si activas funciones de cuenta o sincronización, ciertos datos también pueden almacenarse en servicios en la nube para que puedas recuperarlos más adelante."
+        },
+        {
+          title: "5. Compras y acceso premium",
+          body: "Hi Emi puede ofrecer acceso premium mediante una compra única o mediante acceso Friends & Family configurado por el equipo del producto. La gestión del pago se realiza a través de Apple y Hi Emi no almacena la información completa de tu método de pago."
+        },
+        {
+          title: "6. Compartir información",
+          body: "Hi Emi no está diseñada para publicar automáticamente tus recuerdos. Tu información no se comparte públicamente desde la app sin una acción directa de tu parte."
+        },
+        {
+          title: "7. Seguridad",
+          body: "Se aplican medidas razonables para proteger la información almacenada. Aun así, ningún sistema es completamente infalible y no puede garantizarse seguridad absoluta."
+        },
+        {
+          title: "8. Tus opciones",
+          body: "Puedes editar o eliminar información dentro de la app según las funciones disponibles. Si necesitas ayuda con acceso, sincronización o eliminación de datos asociados a tu cuenta, puedes contactarnos."
+        },
+        {
+          title: "9. Niños",
+          body: "Hi Emi está pensada para ser usada por madres, padres o adultos responsables. No está dirigida a que niños creen cuentas por sí solos."
+        },
+        {
+          title: "10. Cambios a esta política",
+          body: "Esta política puede actualizarse en el futuro. Si hacemos cambios importantes, publicaremos la versión más reciente en esta misma URL."
+        },
+        {
+          title: "11. Contacto",
+          body: "Si tienes preguntas sobre privacidad o datos personales relacionados con Hi Emi, puedes escribir a camilo.ibarray@gmail.com."
+        }
+      ]
     }
   },
   en: {
@@ -109,11 +169,13 @@ const COPY = {
       openBlog: "Open blog",
       openSupport: "Go to support",
       openMarketing: "Open main page",
+      openPrivacy: "Open privacy",
       copyright: "Copyright © {year} Hi Emi. All rights reserved.",
       builtBy: "Built by Camilo Ibarra.",
       supportEmailLabel: "Support email",
       marketingUrlLabel: "Marketing URL",
-      supportUrlLabel: "Support URL"
+      supportUrlLabel: "Support URL",
+      privacyUrlLabel: "Privacy URL"
     },
     marketing: {
       pageTitle: "Hi Emi | Save their words forever",
@@ -185,6 +247,63 @@ const COPY = {
         ["I have Premium or Friends & Family access and it isn't showing", "Send us the email tied to your account so we can verify the configured access."],
         ["I want to report a bug", "Send a short description, steps to reproduce it, and a screenshot if you have one."]
       ]
+    },
+    privacy: {
+      pageTitle: "Hi Emi | Privacy Policy",
+      eyebrow: "Official privacy policy",
+      title: "Your privacy matters, and your memories should feel safe.",
+      subtitle:
+        "This policy explains what information Hi Emi may process, how it is used, and what choices you have regarding your data.",
+      primaryCta: "Contact support",
+      secondaryCta: "Open main page",
+      lastUpdatedLabel: "Last updated",
+      lastUpdatedDate: "August 3, 2026",
+      sections: [
+        {
+          title: "1. What Hi Emi does",
+          body: "Hi Emi is an app designed to save words, audio clips, photos, and memories related to your baby's early language development."
+        },
+        {
+          title: "2. What information you may store",
+          body: "Depending on how you use the app, you may store names, nicknames, saved words, audio recordings, photos, categories, and settings related to your experience."
+        },
+        {
+          title: "3. How we use that information",
+          body: "Information is used to display your memories inside the app, organize content, enable premium features, and if you connect an account, sync your data to the cloud."
+        },
+        {
+          title: "4. Local and cloud storage",
+          body: "Some information may be stored locally on your device. If you enable account or sync features, certain data may also be stored in cloud services so you can recover it later."
+        },
+        {
+          title: "5. Purchases and premium access",
+          body: "Hi Emi may offer premium access through a one-time purchase or through Friends & Family access configured by the product team. Payment handling is managed by Apple, and Hi Emi does not store your full payment method information."
+        },
+        {
+          title: "6. Sharing information",
+          body: "Hi Emi is not designed to automatically publish your memories. Your information is not publicly shared by the app unless you take a direct action to do so."
+        },
+        {
+          title: "7. Security",
+          body: "Reasonable measures are used to protect stored information. However, no system is completely infallible, and absolute security cannot be guaranteed."
+        },
+        {
+          title: "8. Your choices",
+          body: "You can edit or delete information inside the app according to the features available. If you need help with access, sync, or deletion of data associated with your account, you can contact us."
+        },
+        {
+          title: "9. Children",
+          body: "Hi Emi is intended to be used by parents or responsible adults. It is not meant for children to create accounts on their own."
+        },
+        {
+          title: "10. Changes to this policy",
+          body: "This policy may be updated in the future. If we make important changes, we will publish the latest version at this same URL."
+        },
+        {
+          title: "11. Contact",
+          body: "If you have questions about privacy or personal data related to Hi Emi, you can write to camilo.ibarray@gmail.com."
+        }
+      ]
     }
   }
 };
@@ -199,7 +318,9 @@ function resolveLanguage() {
 }
 
 function pageMode() {
-  return document.body.dataset.page === "support" ? "support" : "marketing";
+  const mode = document.body.dataset.page;
+  if (mode === "support" || mode === "privacy") return mode;
+  return "marketing";
 }
 
 function marketingHref(language) {
@@ -212,6 +333,10 @@ function supportHref(language) {
 
 function blogHref(language) {
   return `${BLOG_URL}?lang=${language}`;
+}
+
+function privacyHref(language) {
+  return `${PRIVACY_URL}?lang=${language}`;
 }
 
 function emailHref(language) {
@@ -243,6 +368,7 @@ function App() {
   const footerLinks = [
     [common.marketing, marketingHref(language)],
     [common.support, supportHref(language)],
+    [common.openPrivacy, privacyHref(language)],
     [common.blog, blogHref(language)]
   ];
 
@@ -259,7 +385,11 @@ function App() {
 
         <div className="topbar-actions">
           <a className="ghost-link" href=${mode === "support" ? marketingHref(language) : supportHref(language)}>
-            ${mode === "support" ? common.openMarketing : common.openSupport}
+            ${mode === "support"
+              ? common.openMarketing
+              : mode === "privacy"
+                ? common.openSupport
+                : common.openSupport}
           </a>
           <div className="lang-switch" aria-label=${common.languageLabel}>
             <button
@@ -332,7 +462,8 @@ function App() {
                   </div>
                 </div>
               `
-            : html`
+            : mode === "support"
+              ? html`
                 <div className="hero-side support-grid">
                   ${copy.cards.map(
                     (card) => html`
@@ -346,6 +477,27 @@ function App() {
                       </article>
                     `
                   )}
+                </div>
+              `
+              : html`
+                <div className="hero-side">
+                  <article className="glass-card highlight-card">
+                    <h2>${copy.lastUpdatedLabel}</h2>
+                    <p>${copy.lastUpdatedDate}</p>
+                    <div className="memory-stack">
+                      ${copy.sections.slice(0, 3).map(
+                        (section) => html`
+                          <div className="memory-item" key=${section.title}>
+                            <div className="memory-icon">🔒</div>
+                            <div>
+                              <strong>${section.title}</strong>
+                              <span>${section.body}</span>
+                            </div>
+                          </div>
+                        `
+                      )}
+                    </div>
+                  </article>
                 </div>
               `
         }
@@ -385,7 +537,8 @@ function App() {
                 </article>
               </section>
             `
-          : html`
+          : mode === "support"
+            ? html`
               <section className="page-section">
                 <div className="section-header">
                   <h2>${copy.faqTitle}</h2>
@@ -397,6 +550,28 @@ function App() {
                       <article className="faq-card" key=${question}>
                         <h3>${question}</h3>
                         <p>${answer}</p>
+                      </article>
+                    `
+                  )}
+                </div>
+              </section>
+            `
+            : html`
+              <section className="page-section">
+                <div className="section-header">
+                  <h2>${copy.lastUpdatedLabel}: ${copy.lastUpdatedDate}</h2>
+                  <p>
+                    ${language === "es"
+                      ? "Esta página está pensada para usarse como Privacy Policy URL pública en App Store Connect."
+                      : "This page is intended to be used as the public Privacy Policy URL in App Store Connect."}
+                  </p>
+                </div>
+                <div className="feature-grid">
+                  ${copy.sections.map(
+                    (section) => html`
+                      <article className="feature-card" key=${section.title}>
+                        <h3>${section.title}</h3>
+                        <p>${section.body}</p>
                       </article>
                     `
                   )}
@@ -423,6 +598,7 @@ function App() {
             <p>${common.supportEmailLabel}: ${SUPPORT_EMAIL}</p>
             <p>${common.marketingUrlLabel}: ${MARKETING_URL}</p>
             <p>${common.supportUrlLabel}: ${SUPPORT_URL}</p>
+            <p>${common.privacyUrlLabel}: ${PRIVACY_URL}</p>
             <div className="hero-cta">
               <a className="chip-button" href=${emailHref(language)}>${common.contact}</a>
               <a className="chip-button" href=${blogHref(language)}>${common.openBlog}</a>

@@ -6,6 +6,7 @@ Ahora también incluye páginas públicas para App Store:
 
 - `app.html`: página de marketing de `Hi Emi`
 - `support.html`: página de soporte de `Hi Emi`
+- `privacy.html`: política de privacidad pública
 
 ## Archivos
 
@@ -13,6 +14,7 @@ Ahora también incluye páginas públicas para App Store:
 - `article.html?id=1`: detalle dinámico.
 - `app.html`: landing pública para marketing.
 - `support.html`: soporte oficial.
+- `privacy.html`: política de privacidad.
 - `data/articles.json`: contenido editable.
 - `css/style.css`: estilos.
 - `css/app-page.css`: estilos de marketing y soporte.
@@ -35,3 +37,4 @@ Si publicas este repo en GitHub Pages, puedes usar por ejemplo:
 
 - Marketing URL: `https://tuusuario.github.io/hi-emi-blog/app.html`
 - Support URL: `https://tuusuario.github.io/hi-emi-blog/support.html`
+- Privacy Policy URL: `https://tuusuario.github.io/hi-emi-blog/privacy.html`
