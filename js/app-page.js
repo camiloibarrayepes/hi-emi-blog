@@ -55,7 +55,7 @@ const COPY = {
       features: [
         ["🎙️", "Grabaciones por palabra", "Asocia varios audios a una misma palabra y conserva cómo fue cambiando con el tiempo."],
         ["☁️", "Sincronización", "Conecta tu cuenta para mantener tus recuerdos disponibles cuando los necesites."],
-        ["💜", "Diseño emocional", "Una experiencia suave, íntima y enfocada en esos instantes que suelen perderse." ]
+        ["💜", "Diseño emocional", "Una experiencia suave, íntima y enfocada en esos instantes que suelen perderse."]
       ],
       finalTitle: "Una página útil para App Store y para las familias",
       finalBody:
@@ -105,54 +105,62 @@ const COPY = {
       eyebrow: "Política de privacidad oficial",
       title: "Tu privacidad importa y tus recuerdos deben sentirse seguros.",
       subtitle:
-        "Esta política explica qué información puede procesar Hi Emi, cómo se usa y qué opciones tienes respecto a tus datos.",
+        "Esta política explica qué datos recopila y procesa Hi Emi, cómo se obtienen, cómo se usan, cuándo se comparten y qué opciones tienes respecto a tu información.",
       primaryCta: "Contactar soporte",
       secondaryCta: "Ver página principal",
       lastUpdatedLabel: "Última actualización",
-      lastUpdatedDate: "3 de agosto de 2026",
+      lastUpdatedDate: "3 de septiembre de 2026",
       sections: [
         {
           title: "1. Qué hace Hi Emi",
           body: "Hi Emi es una app pensada para guardar palabras, audios, fotos y recuerdos relacionados con el desarrollo temprano del lenguaje de tu bebé."
         },
         {
-          title: "2. Qué información puedes guardar",
-          body: "Dependiendo de cómo uses la app, puedes guardar nombres, sobrenombres, palabras registradas, grabaciones de audio, fotos, categorías y configuraciones relacionadas con tu experiencia."
+          title: "2. Qué datos podemos recopilar o almacenar",
+          body: "Dependiendo de cómo uses la app, Hi Emi puede almacenar información que ingresas directamente, como tu correo electrónico, nombre del bebé, apodo, nombre de usuario, género, fecha de nacimiento, palabras registradas, significados, categorías, fotos, grabaciones de audio y configuraciones relacionadas con tu experiencia."
         },
         {
-          title: "3. Cómo usamos esa información",
-          body: "La información se usa para mostrar tus recuerdos dentro de la app, organizar el contenido, habilitar funciones premium, y en caso de que conectes tu cuenta, sincronizar tus datos en la nube."
+          title: "3. Cómo se obtienen esos datos",
+          body: "Los datos se obtienen cuando tú los escribes dentro de la app, cuando grabas audios, cuando seleccionas fotos, cuando creas o inicias sesión en una cuenta, cuando eliges sincronizar en la nube y cuando realizas acciones como editar, eliminar o restaurar recuerdos."
         },
         {
-          title: "4. Almacenamiento local y en la nube",
-          body: "Parte de la información puede almacenarse localmente en tu dispositivo. Si activas funciones de cuenta o sincronización, ciertos datos también pueden almacenarse en servicios en la nube para que puedas recuperarlos más adelante."
+          title: "4. Cómo usamos tus datos",
+          body: "Usamos esta información para mostrar y organizar tus recuerdos dentro de la app, permitir la reproducción de audios y visualización de fotos, crear e identificar tu cuenta, sincronizar y restaurar contenido entre dispositivos, y habilitar o validar funciones premium o accesos especiales configurados para tu cuenta."
         },
         {
-          title: "5. Compras y acceso premium",
-          body: "Hi Emi puede ofrecer acceso premium mediante una compra única o mediante acceso Friends & Family configurado por el equipo del producto. La gestión del pago se realiza a través de Apple y Hi Emi no almacena la información completa de tu método de pago."
+          title: "5. Almacenamiento local y sincronización en la nube",
+          body: "Parte de la información se almacena localmente en tu dispositivo. Si decides activar la sincronización en la nube, Hi Emi puede enviar y almacenar ciertos datos en Google Firebase, incluyendo Firebase Authentication, Firestore y Storage, para crear tu cuenta, mantener tu sesión, sincronizar tus recuerdos y permitir su recuperación posterior."
         },
         {
-          title: "6. Compartir información",
-          body: "Hi Emi no está diseñada para publicar automáticamente tus recuerdos. Tu información no se comparte públicamente desde la app sin una acción directa de tu parte."
+          title: "6. Qué datos se comparten y con quién",
+          body: "Si activas la nube, Hi Emi comparte con Google Firebase únicamente los datos necesarios para esa función, como correo electrónico, nombre del bebé, apodo, nombre de usuario, género, fecha de nacimiento, palabras, significados, audios, fotos y cambios de sincronización. Hi Emi no comparte tus datos con servicios de inteligencia artificial de terceros."
         },
         {
-          title: "7. Seguridad",
-          body: "Se aplican medidas razonables para proteger la información almacenada. Aun así, ningún sistema es completamente infalible y no puede garantizarse seguridad absoluta."
+          title: "7. Permiso del usuario y carácter opcional de la nube",
+          body: "La sincronización en la nube es opcional. Hi Emi solicita tu autorización antes de enviar datos a Google Firebase para esa función. Si no otorgas ese permiso, puedes seguir usando la app localmente sin activar la nube."
         },
         {
-          title: "8. Tus opciones",
-          body: "Puedes editar o eliminar información dentro de la app según las funciones disponibles. Si necesitas ayuda con acceso, sincronización o eliminación de datos asociados a tu cuenta, puedes contactarnos."
+          title: "8. Compras y acceso premium",
+          body: "Hi Emi puede ofrecer acceso premium mediante una compra única o mediante acceso Friends & Family configurado para tu cuenta. La gestión del pago se realiza a través de Apple y Hi Emi no almacena la información completa de tu método de pago."
         },
         {
-          title: "9. Niños",
+          title: "9. Seguridad y protección de datos",
+          body: "Aplicamos medidas razonables para proteger la información almacenada y procuramos utilizar proveedores que ofrezcan medidas de protección adecuadas para los datos procesados. Sin embargo, ningún sistema puede garantizar seguridad absoluta."
+        },
+        {
+          title: "10. Tus opciones y control sobre tus datos",
+          body: "Puedes editar o eliminar información dentro de la app según las funciones disponibles. También puedes decidir no activar la nube. Si necesitas ayuda con acceso, sincronización o eliminación de datos asociados a tu cuenta, puedes escribirnos."
+        },
+        {
+          title: "11. Niños",
           body: "Hi Emi está pensada para ser usada por madres, padres o adultos responsables. No está dirigida a que niños creen cuentas por sí solos."
         },
         {
-          title: "10. Cambios a esta política",
+          title: "12. Cambios a esta política",
           body: "Esta política puede actualizarse en el futuro. Si hacemos cambios importantes, publicaremos la versión más reciente en esta misma URL."
         },
         {
-          title: "11. Contacto",
+          title: "13. Contacto",
           body: "Si tienes preguntas sobre privacidad o datos personales relacionados con Hi Emi, puedes escribir a camilo.ibarray@gmail.com."
         }
       ]
@@ -253,54 +261,62 @@ const COPY = {
       eyebrow: "Official privacy policy",
       title: "Your privacy matters, and your memories should feel safe.",
       subtitle:
-        "This policy explains what information Hi Emi may process, how it is used, and what choices you have regarding your data.",
+        "This policy explains what data Hi Emi collects and processes, how it is obtained, how it is used, when it is shared, and what choices you have regarding your information.",
       primaryCta: "Contact support",
       secondaryCta: "Open main page",
       lastUpdatedLabel: "Last updated",
-      lastUpdatedDate: "August 3, 2026",
+      lastUpdatedDate: "September 3, 2026",
       sections: [
         {
           title: "1. What Hi Emi does",
           body: "Hi Emi is an app designed to save words, audio clips, photos, and memories related to your baby's early language development."
         },
         {
-          title: "2. What information you may store",
-          body: "Depending on how you use the app, you may store names, nicknames, saved words, audio recordings, photos, categories, and settings related to your experience."
+          title: "2. What data we may collect or store",
+          body: "Depending on how you use the app, Hi Emi may store information you enter directly, such as your email address, your baby's name, nickname, username, gender, birth date, saved words, meanings, categories, photos, audio recordings, and settings related to your experience."
         },
         {
-          title: "3. How we use that information",
-          body: "Information is used to display your memories inside the app, organize content, enable premium features, and if you connect an account, sync your data to the cloud."
+          title: "3. How that data is obtained",
+          body: "Data is obtained when you type it into the app, record audio, select photos, create or sign in to an account, choose to enable cloud sync, and perform actions such as editing, deleting, or restoring memories."
         },
         {
-          title: "4. Local and cloud storage",
-          body: "Some information may be stored locally on your device. If you enable account or sync features, certain data may also be stored in cloud services so you can recover it later."
+          title: "4. How we use your data",
+          body: "We use this information to display and organize your memories inside the app, enable audio playback and photo viewing, create and identify your account, sync and restore content across devices, and enable or validate premium features or special account-based access."
         },
         {
-          title: "5. Purchases and premium access",
-          body: "Hi Emi may offer premium access through a one-time purchase or through Friends & Family access configured by the product team. Payment handling is managed by Apple, and Hi Emi does not store your full payment method information."
+          title: "5. Local storage and cloud sync",
+          body: "Some information is stored locally on your device. If you choose to enable cloud sync, Hi Emi may send and store certain data in Google Firebase, including Firebase Authentication, Firestore, and Storage, to create your account, maintain your session, sync your memories, and allow later recovery."
         },
         {
-          title: "6. Sharing information",
-          body: "Hi Emi is not designed to automatically publish your memories. Your information is not publicly shared by the app unless you take a direct action to do so."
+          title: "6. What data is shared and with whom",
+          body: "If you enable cloud sync, Hi Emi shares with Google Firebase only the data needed for that feature, such as email address, baby's name, nickname, username, gender, birth date, words, meanings, audio, photos, and sync changes. Hi Emi does not share your data with third-party artificial intelligence services."
         },
         {
-          title: "7. Security",
-          body: "Reasonable measures are used to protect stored information. However, no system is completely infallible, and absolute security cannot be guaranteed."
+          title: "7. User permission and optional cloud sync",
+          body: "Cloud sync is optional. Hi Emi asks for your permission before sending data to Google Firebase for that feature. If you do not grant permission, you can continue using the app locally without enabling cloud sync."
         },
         {
-          title: "8. Your choices",
-          body: "You can edit or delete information inside the app according to the features available. If you need help with access, sync, or deletion of data associated with your account, you can contact us."
+          title: "8. Purchases and premium access",
+          body: "Hi Emi may offer premium access through a one-time purchase or through Friends & Family access configured for your account. Payment handling is managed by Apple, and Hi Emi does not store your full payment method information."
         },
         {
-          title: "9. Children",
+          title: "9. Security and data protection",
+          body: "We apply reasonable measures to protect stored information and aim to use providers that offer appropriate safeguards for processed data. However, no system can guarantee absolute security."
+        },
+        {
+          title: "10. Your choices and control over your data",
+          body: "You can edit or delete information inside the app according to the available features. You can also choose not to enable cloud sync. If you need help with access, sync, or deletion of data associated with your account, you can contact us."
+        },
+        {
+          title: "11. Children",
           body: "Hi Emi is intended to be used by parents or responsible adults. It is not meant for children to create accounts on their own."
         },
         {
-          title: "10. Changes to this policy",
+          title: "12. Changes to this policy",
           body: "This policy may be updated in the future. If we make important changes, we will publish the latest version at this same URL."
         },
         {
-          title: "11. Contact",
+          title: "13. Contact",
           body: "If you have questions about privacy or personal data related to Hi Emi, you can write to camilo.ibarray@gmail.com."
         }
       ]
